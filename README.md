@@ -22,5 +22,4 @@ $ make -j16
 ```-fno-legacy-pass-manager -fpass-plugin=/codetronik-pass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64```
 
 
-
 ## Build for Android Application
