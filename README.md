@@ -3,6 +3,9 @@
 ## Build for iOS Application
 
 ### Compile LLVM
+Download the same version as clang of your Xcode. [Xcode Wikipedia](https://en.wikipedia.org/wiki/Xcode)
+Xcode 14.3.1 uses clang-1403.0.22.14.1 and is included in swift-5.8.1 branch.
+
 ```sh
 $ git clone -b swift-5.8.1-RELEASE --depth 1 --single-branch https://github.com/llvm/llvm-project.git
 $ cd llvm-project
