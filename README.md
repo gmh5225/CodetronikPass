@@ -19,7 +19,8 @@ $ make -j16
 ```
 ### Edit your Xcode project
 - Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release
-- ```-fno-legacy-pass-manager -fpass-plugin=/codetronik-pass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64```
+  
+  ```-fno-legacy-pass-manager -fpass-plugin=/codetronik-pass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64```
 
 
 ## Build for Android Application
