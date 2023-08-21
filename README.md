@@ -17,10 +17,10 @@ $ cmake -B Release -DLLVM_DIR=~/Downloads/llvm-project/Release/lib/cmake -DCMAKE
 $ cd Release
 $ make -j16
 ```
+
 ### Edit your Xcode project
-- Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release
-  
-  ```-fno-legacy-pass-manager -fpass-plugin=/codetronik-pass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64```
+- Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
+```-fno-legacy-pass-manager -fpass-plugin=~/Downloads/ollvm-xcode/Release/libLLVMObfuscator.dylib -DCMAKE_OSX_ARCHITECTURES=arm64```
 
 
 ## Build for Android Application
