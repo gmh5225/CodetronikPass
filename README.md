@@ -1,6 +1,6 @@
 # Codetronik's LLVM Obfuscation Pass
 
-`#0969DA`## Build for iOS Application
+## Build for iOS Application
 
 ### Compile LLVM
 ```sh
