@@ -38,3 +38,4 @@ Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Rele
 
 ### Test Environment
 - iPhone 12 mini
+- Xcode 14.3.1
