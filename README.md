@@ -1,4 +1,8 @@
-# Codetronik's LLVM Obfuscation Pass
+# Codetronik's LLVM Obfuscation Pass for ARM64
+
+It is currently being developed to protect iOS apps. So I haven't tested it on Android yet.
+
+### Features
 
 ## Build for iOS Application
 
@@ -27,4 +31,9 @@ $ make -j16
 Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
 ```-fno-legacy-pass-manager -fpass-plugin=/YOURPATH/CodetronikPass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64```
 
-## Build for Android Application
+Output
+- dynamic library (.dylib)
+
+### Test Environment
+AARCH64 (ARM64)
+- iPhone 12 mini
