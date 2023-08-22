@@ -2,7 +2,9 @@
 
 It is currently being developed to protect iOS apps. So I haven't tested it on Android yet.
 
-### Features
+## Features
+
+Obstruction of decompile code to C
 
 ## Build for iOS Application
 
@@ -35,5 +37,4 @@ Output
 - dynamic library (.dylib)
 
 ### Test Environment
-AARCH64 (ARM64)
 - iPhone 12 mini
