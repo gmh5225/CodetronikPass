@@ -1,4 +1,4 @@
-# Codetronik's LLVM Obfuscation Pass for ARM64
+# LLVM Obfuscation Pass for ARM64
 
 It is currently being developed to protect iOS apps. So I haven't tested it on Android yet.
 
