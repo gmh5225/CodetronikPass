@@ -4,7 +4,7 @@ It is currently being developed to protect iOS apps. So I haven't tested it on A
 
 ## Features
 
-Obstruction of decompile code to C
+- Obstruction of decompile code to C
 
 ## Build for iOS Application
 
