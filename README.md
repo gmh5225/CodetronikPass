@@ -4,7 +4,7 @@ It is currently being developed to protect iOS apps. So I haven't tested it on A
 
 ## Features
 
-- Interrupting decompile code to C
+- Interrupting decompile code to C (such as IDA and Binary Ninja)
 
 ## Build for iOS Application
 
