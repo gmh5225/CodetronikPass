@@ -1,0 +1,1 @@
+target_sources(CodetronikPass PRIVATE AntiFunctionDecompile.cpp)
