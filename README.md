@@ -36,6 +36,9 @@ Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Rele
 ## Output
 - dynamic library (.dylib)
 
+## Issues
+Be sure to optimize using the -Ox option. Otherwise, pass cannot be applied.
+
 ## Test Environment
 - iPhone 12 mini
 - Xcode 14.3.1
