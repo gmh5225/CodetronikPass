@@ -29,8 +29,8 @@ $ cd Release
 $ make -j16
 ```
 
-### Clang option
-## Xcode
+## Clang option
+### Xcode
 Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
 > -fno-legacy-pass-manager -fpass-plugin=/YOURPATH/CodetronikPass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64
 
