@@ -34,7 +34,10 @@ bool AntiFunctionDecompile::InsertAsmIntoBlock(Function &F)
         // insert first non-PHI instruction in this block.
         BasicBlock::iterator IP = BB.getFirstInsertionPt();
         IRBuilder<> IRB(&(*IP));
-        StringRef asmString = "b 0x4\n"
+
+        // I used x29 because it's not commonly used. however, bad luck can cause a crash.
+        StringRef asmString = "cmp x29, 0x109\n"
+                              "bne 0x8\n"                      
                               ".long 0xdeadbeef\n";
 
         InlineAsm *IA = InlineAsm::get(Ty, asmString, "", true, false, InlineAsm::AD_ATT);
