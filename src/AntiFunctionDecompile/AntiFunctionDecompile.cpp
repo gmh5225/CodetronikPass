@@ -54,12 +54,12 @@ bool AntiFunctionDecompile::InsertAsmIntoPrologue(Function &F)
     
     // only arm64
     /* 
-    1E 00 00 10     ADR X30, 0x0
-    DE 33 00 91     ADD X30, X30, 0xC
-    C0 03 5F D6     RET
+    BF 27 04 F1     cmp X29, 0x109
+    DE 33 00 91     bne 0x8
+    CA FE BA BE     just value (no inst.)
     */    
 
-    StringRef obfusInst("\x1E\x00\x00\x10\xDE\x33\x00\x91\xC0\x03\x5F\xD6", 12);
+    StringRef obfusInst("\xBF\x27\x04\xF1\x41\x00\x00\x54\xCA\xFE\xBA\xBE", 12);
     Constant* prologue = ConstantDataArray::getRaw(obfusInst, obfusInst.size(), int8Ty);
     F.setPrologueData(prologue);
     return true;
