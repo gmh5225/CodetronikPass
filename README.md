@@ -29,16 +29,16 @@ $ cd Release
 $ make -j16
 ```
 
-### Edit your Xcode project
+### Clang option
+## Xcode
 Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
 > -fno-legacy-pass-manager -fpass-plugin=/YOURPATH/CodetronikPass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64
 
 ## Output
-- dynamic library (.dylib)
+- dynamic library
 
 ## Issues
 Be sure to optimize using the -Ox option. Otherwise, pass cannot be applied.
 
 ## Test Environment
-- iPhone 12 mini
-- Xcode 14.3.1
+- C++ / iPhone 12 mini / Xcode 14.3.1
