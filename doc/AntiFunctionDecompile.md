@@ -1,3 +1,6 @@
+# Anti Code Decompile
+It confuses the decompiler by inserting fake instructions that cannot be executed in opaque predicates.
+
 This is the original code.
 ```
 int main()
@@ -40,3 +43,6 @@ This is IR after obfuscation pass.
  - Inst :  %9 = call i32 @puts(i8* noundef nonnull dereferenceable(1) getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i64 0, i64 0))
  - Inst :  ret i32 0
 ```
+
+This is the obfuscated binary.
+![image](https://github.com/codetronik/CodetronikPass/blob/main/img/AntiFunctionDecompile.png?raw=true)
