@@ -34,7 +34,7 @@ $ make -j16
 ### Compile LLVM
 1. Open the ```manifest.xml``` from the path below.<br>
 ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/```
-2. Find string ```project path="toolchain/llvm-project"```, and check the revision.
+2. Find string ```project path="toolchain/llvm-project"``` and check the revision.
 3. Download and compile llvm<br>
 ```
 $ git clone https://android.googlesource.com/toolchain/llvm-project
