@@ -6,7 +6,7 @@ It is currently being developed to protect iOS apps. So I haven't tested it on A
 
 - [Anti Code Decompile](https://github.com/codetronik/CodetronikPass/blob/main/doc/AntiFunctionDecompile.md)
 
-## Build for iOS Application
+## Build for iOS  (Build on Mac)
 
 ### Compile LLVM
 Download the same version as clang of your Xcode. Check your version [here](https://en.wikipedia.org/wiki/Xcode)<br>
@@ -29,6 +29,18 @@ $ cd Release
 $ make -j16
 ```
 
+## Build for Android (Build on x86_64 linux)
+
+### Compile LLVM
+1. Open the ```manifest.xml``` from the path below.<br>
+```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/```\
+2. Find string ```project path="toolchain/llvm-project"```, and check the revision.
+3. Download llvm<br>
+```
+$ sudo apt install repo
+$ repo init -u https://android.googlesource.com/platform/manifest -b YOUR-LLVM-REVISION
+$ repo sync -c
+```
 ## Clang option
 ### Xcode
 Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
