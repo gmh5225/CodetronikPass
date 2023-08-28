@@ -29,20 +29,20 @@ $ cd Release
 $ make -j16
 ```
 
-## Build for Android (Build on x86_64 linux)
+## Build for Android (Build on Windows)
 
 ### Compile LLVM
-1. Open the ```manifest.xml``` from the path below.<br>
-```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/```
-2. Find string ```project path="toolchain/llvm-project"``` and check the revision.
-3. Download and compile llvm<br>
+1. open the manifest.xml from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
+2. install [CMake](https://cmake.org/download/)
+3. install Visual Studio 2022 and open "Developer Command Prompt for VS 2022"
+4. download and compile Clang.
 ```
-$ git clone https://android.googlesource.com/toolchain/llvm-project
-$ cd llvm-project
-$ git checkout YOUR_LLVM_REVISION
-$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang" 
-$ cd Release
-$ make -j16
+git clone https://android.googlesource.com/toolchain/llvm-project
+cd llvm-project
+git checkout YOUR_NDK_LLVM_PROJECT_REVISION
+cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang" -G "NMake Makefiles"
+cd Release
+nmake
 ```
 ## Clang option
 ### Xcode
