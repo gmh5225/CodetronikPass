@@ -33,7 +33,7 @@ $ make -j16
 You should download and use the Clang built by AOSP.
 This is due to errors when applying Pass plugins built with Clang built with llvm-project to the Arm64 Cross-Compiler.
 
-### Download Clang
+### Download AOSP Clang
 1. Open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check your Clang revision ```rXXXXXXXX```
 2. Open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+refs``` then find and click the link ```ndk-rXX-release```
 3. find and click your revision. then download and unzip tgz
@@ -43,7 +43,7 @@ $ wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/
 $ tar xvzf clang-r450784d1.tar.gz -C clang_aosp
 ```
 
-### Fix Clang's cmake
+### Fix AOSP Clang's cmake
 ```sh
 sed
 ```
