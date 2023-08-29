@@ -33,8 +33,8 @@ $ make -j16
 
 ### Download Clang
 1. Open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check the revision ```rXXXXXXXX```
-2. Open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+refs``` then find and open ```ndk-rXX-release```
-3. find and open your revision. then download tgz
+2. Open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+refs``` then find and click the link ```ndk-rXX-release```
+3. find and click your revision. then download tgz
 4. unzip tgz
 ```sh
 $ tar xvzf clang-rXXXXXXXX.tar.gz -C YOUR_CLANG_PATH
