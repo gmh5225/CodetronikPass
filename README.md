@@ -32,12 +32,12 @@ $ make -j16
 ## Build for Android (Build on Linux)
 
 ### Download Clang
-1. open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check the revision.
-2. open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/windows-x86/+refs``` and find and open ```ndk-rXX-release```
-3. find and open your revision
-4. download and unzip tgz
+1. Open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check the revision ```rXXXXXXXX```
+2. Open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+refs``` then find and open ```ndk-rXX-release```
+3. find and open your revision. then download tgz
+4. unzip tgz
 ```sh
-$ tar xvzf clang-REVISION.tar.gz -C YOUR_CLANG_PATH
+$ tar xvzf clang-rXXXXXXXX.tar.gz -C YOUR_CLANG_PATH
 ```
 
 ### Compile Pass Plugin
