@@ -43,7 +43,10 @@ $ wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/
 $ tar xvzf clang-r450784d1.tar.gz -C clang_aosp
 ```
 
-## Fix Clang's cmake
+### Fix Clang's cmake
+```sh
+sed
+```
 
 ### Compile Pass Plugin
 ```sh
