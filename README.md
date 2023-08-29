@@ -29,23 +29,24 @@ $ cd Release
 $ make -j16
 ```
 
-## Build for Android (Build on Windows)
+## Build for Android (Build on Linux)
 
-### Compile LLVM
-1. open ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/AndroidVersion.txt``` and check the revision.
+### Download Clang
+1. open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check the revision.
 2. open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/windows-x86/+refs``` and find and open ```ndk-rXX-release```
 3. find and open your revision
-4. download tgz
-5. install [CMake](https://cmake.org/download/)
+4. download and unzip tgz
+```sh
+$ tar xvzf clang-REVISION.tar.gz -C YOUR_CLANG_PATH
+```
 
+### Compile Pass Plugin
+```sh
+$ git clone https://github.com/codetronik/CodetronikPass
+$ cd CodetronikPass
+$ cmake -B Release -DLLVM_DIR=/YOUR_CLANG_PATH/lib64/cmake
 ```
-git clone https://android.googlesource.com/toolchain/llvm-project
-cd llvm-project
-git checkout YOUR_NDK_LLVM_PROJECT_REVISION
-cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang" -G "NMake Makefiles"
-cd Release
-nmake
-```
+
 ## Clang option
 ### Xcode
 Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
