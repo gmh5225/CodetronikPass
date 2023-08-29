@@ -32,10 +32,12 @@ $ make -j16
 ## Build for Android (Build on Windows)
 
 ### Compile LLVM
-1. open the manifest.xml from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
-2. install [CMake](https://cmake.org/download/)
-3. install Visual Studio 2022 and open "Developer Command Prompt for VS 2022"
-4. download and compile Clang.
+1. open ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/AndroidVersion.txt``` and check the revision.
+2. open the URL ```https://android.googlesource.com/platform/prebuilts/clang/host/windows-x86/+refs``` and find and open ```ndk-rXX-release```
+3. find and open your revision
+4. download tgz
+5. install [CMake](https://cmake.org/download/)
+
 ```
 git clone https://android.googlesource.com/toolchain/llvm-project
 cd llvm-project
