@@ -30,6 +30,8 @@ $ make -j16
 ```
 
 ## Build for Android (Build on Linux)
+You should download and use the Clang built by AOSP.
+This is due to errors when applying Pass plugins built with Clang built with llvm-project to the Arm64 Cross-Compiler.
 
 ### Download Clang
 1. Open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check your Clang revision ```rXXXXXXXX```
@@ -41,11 +43,13 @@ $ wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/
 $ tar xvzf clang-r450784d1.tar.gz -C clang_aosp
 ```
 
+## Fix Clang's cmake
+
 ### Compile Pass Plugin
 ```sh
 $ git clone https://github.com/codetronik/CodetronikPass
 $ cd CodetronikPass
-$ cmake -B Release -DLLVM_DIR=/YOUR_CLANG_PATH/lib64/cmake
+$ cmake -B Release -DLLVM_DIR=/YOUR_CLANG_AOSP_PATH/lib64/cmake -DCOMPILER=/YOUR_CLANG_AOSP_PATH/bin/clang
 ```
 
 ## Clang option
