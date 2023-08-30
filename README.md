@@ -29,9 +29,10 @@ $ cd Release
 $ make -j16
 ```
 
+## Build for Android (Build on Windows)
+
 ## Build for Android (Build on Linux)
-You should download and use the Clang built by AOSP.
-This is due to errors when applying Pass plugins built with Clang built with llvm-project to the Arm64 Cross-Compiler.
+Downloading a prebuilt clang from AOSP makes it easy to compile a pass without having to compile llvm.
 
 ### Download AOSP Clang
 1. Open ```/NDKPATH/toolchains/llvm/prebuilt/linux-x86_64/AndroidVersion.txt``` and check your Clang revision ```rXXXXXXXX```
