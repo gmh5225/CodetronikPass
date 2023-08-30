@@ -44,8 +44,7 @@ $ tar xvzf clang-r450784d1.tar.gz -C clang_aosp
 ```
 
 ### Fix AOSP Clang's cmake
-Open ```/YOUR_CLANG_AOSP_PATH/lib64/cmake/LLVMExports.cmake"```
-then Find the code below and delete it. 
+Open ```/YOUR_CLANG_AOSP_PATH/lib64/cmake/LLVMExports.cmake``` then Find the code below and delete it. 
 ```
 # Loop over all imported files and verify that they actually exist
 foreach(target ${_IMPORT_CHECK_TARGETS} )
