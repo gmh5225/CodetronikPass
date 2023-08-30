@@ -30,6 +30,7 @@ $ make -j16
 ```
 
 ## Build for Android (on Windows)
+Use Visual Studio 2022 to build llvm and llvm pass.
 
 ## Build for Android (on Linux)
 Downloading a prebuilt clang from AOSP makes it easy to compile a pass without having to compile llvm.
