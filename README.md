@@ -6,7 +6,7 @@ It is currently being developed to protect iOS apps. So I haven't tested it on A
 
 - [Anti Code Decompile](https://github.com/codetronik/CodetronikPass/blob/main/doc/AntiFunctionDecompile.md)
 
-## Build for iOS  (Build on Mac)
+## Build for iOS  (on Mac)
 
 ### Compile LLVM
 Download the same version as clang of your Xcode. Check your version [here](https://en.wikipedia.org/wiki/Xcode)<br>
@@ -29,9 +29,9 @@ $ cd Release
 $ make -j16
 ```
 
-## Build for Android (Build on Windows)
+## Build for Android (on Windows)
 
-## Build for Android (Build on Linux)
+## Build for Android (on Linux)
 Downloading a prebuilt clang from AOSP makes it easy to compile a pass without having to compile llvm.
 
 ### Download AOSP Clang
