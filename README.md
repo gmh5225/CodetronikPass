@@ -44,8 +44,27 @@ $ tar xvzf clang-r450784d1.tar.gz -C clang_aosp
 ```
 
 ### Fix AOSP Clang's cmake
-```sh
-sed
+Open ```/YOUR_CLANG_AOSP_PATH/lib64/cmake/LLVMExports.cmake"
+then Find the code below and delete it. 
+```
+# Loop over all imported files and verify that they actually exist
+foreach(target ${_IMPORT_CHECK_TARGETS} )
+  foreach(file ${_IMPORT_CHECK_FILES_FOR_${target}} )
+    if(NOT EXISTS "${file}" )
+      message(FATAL_ERROR "The imported target \"${target}\" references the file
+   \"${file}\"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   \"${CMAKE_CURRENT_LIST_FILE}\"
+but not all the files it references.
+")
+    endif()
+  endforeach()
+  unset(_IMPORT_CHECK_FILES_FOR_${target})
+endforeach()
+unset(_IMPORT_CHECK_TARGETS)
 ```
 
 ### Compile Pass Plugin
