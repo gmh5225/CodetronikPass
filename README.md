@@ -33,7 +33,7 @@ $ make -j16
 Use Visual Studio 2022 to build llvm and llvm pass.
 
 ### Compile LLVM
-1. open the manifest.xml from the path /NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/ and find string project path="toolchain/llvm-project" and check the revision.
+1. open the ```manifest.xml``` from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
 2. install CMake
 3. install Visual Studio 2022 and open "Developer Command Prompt for VS 2022"
 4. download and compile llvm.
