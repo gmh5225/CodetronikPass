@@ -38,12 +38,12 @@ Use Visual Studio 2022 to build llvm and llvm pass.
 3. install Visual Studio 2022 and open "Developer Command Prompt for VS 2022"
 4. download and compile llvm.
 ```sh
-git clone https://android.googlesource.com/toolchain/llvm-project
-cd llvm-project
-git checkout YOUR_NDK_LLVM_PROJECT_REVISION
-cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="tbd.." -G "NMake Makefiles"
-cd Release
-nmake
+$ git clone https://android.googlesource.com/toolchain/llvm-project
+$ cd llvm-project
+$ git checkout YOUR_NDK_LLVM_PROJECT_REVISION
+$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="tbd.." -G "NMake Makefiles"
+$ cd Release
+$ nmake
 ```
 
 ## Build for Android (on Linux)
