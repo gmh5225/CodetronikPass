@@ -38,11 +38,11 @@ Use Visual Studio 2022 to build llvm and llvm pass.
 3. install Visual Studio 2022 and open "Developer Command Prompt for VS 2022"
 4. download and compile llvm. Make sure to fix ```DLLVM_VERSION_PATCH``` to your ndk version.
 ```sh
-// ndk-r25c
+// ndk-r26-rc1
 $ git clone https://android.googlesource.com/toolchain/llvm-project
 $ cd llvm-project
-$ git checkout 4c603efb0cca074e9238af8b4106c30add4418f6
-$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang" -G "NMake Makefiles" -DCLANG_VENDOR="Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)" -DLLVM_VERSION_PATCH=7"
+$ git checkout d9f89f4d16663d5012e5c09495f3b30ece3d2362
+$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" -G "NMake Makefiles" -DCLANG_VENDOR="Android (10087095, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)" -DLLVM_VERSION_PATCH=2"
 $ cd Release
 $ nmake
 ```
