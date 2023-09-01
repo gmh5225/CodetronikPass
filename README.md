@@ -38,7 +38,7 @@ Use NDK r26 or later versions because Visual Studio SDK does not support clang 1
 1. open the ```manifest.xml``` from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
 2. install CMake
 3. install Visual Studio 2022 and open "Developer Command Prompt for VS 2022"
-4. download and compile llvm. Make sure to fix ```DLLVM_VERSION_PATCH``` to your ndk version.
+4. download and compile llvm. Make sure to fix ```DLLVM_VERSION_PATCH``` to your ndk's Clang version.
 ```sh
 // ndk-r26-rc1
 $ git clone https://android.googlesource.com/toolchain/llvm-project
