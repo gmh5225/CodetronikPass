@@ -32,7 +32,7 @@ $ make -j16
 ## Build for Android (on Windows)
 Use Visual Studio 2022 to build llvm and llvm pass.
 
-Use ndk r26 or later versions because Visual Studio sdk does not support clang 16 or lower.
+Use NDK r26 or later versions because Visual Studio SDK does not support clang 16 or lower.
 
 ### Compile LLVM
 1. open the ```manifest.xml``` from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
