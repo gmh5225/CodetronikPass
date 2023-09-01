@@ -109,4 +109,4 @@ Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Rele
 Be sure to optimize using the -Ox option. Otherwise, pass cannot be applied.
 
 ## Test Environment
-- C++ / iPhone 12 mini / Xcode 14.3.1
+- C++, Objective C++ / iPhone 12 mini / Xcode 14.3.1
