@@ -32,6 +32,8 @@ $ make -j16
 ## Build for Android (on Windows)
 Use Visual Studio 2022 to build llvm and llvm pass.
 
+Use ndk r26 or later versions because Visual Studio sdk does not support clang 16 or lower.
+
 ### Compile LLVM
 1. open the ```manifest.xml``` from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
 2. install CMake
@@ -42,7 +44,7 @@ Use Visual Studio 2022 to build llvm and llvm pass.
 $ git clone https://android.googlesource.com/toolchain/llvm-project
 $ cd llvm-project
 $ git checkout d9f89f4d16663d5012e5c09495f3b30ece3d2362
-$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" -G "NMake Makefiles" -DCLANG_VENDOR="Android (10087095, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)" -DLLVM_VERSION_PATCH=2"
+$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" -G "NMake Makefiles" -DCLANG_VENDOR="Android (10087095, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)" -DLLVM_VERSION_PATCH=2
 $ cd Release
 $ nmake
 ```
