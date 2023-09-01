@@ -34,6 +34,8 @@ Use Visual Studio 2022 to build llvm and llvm pass.
 
 Use NDK r26 or later versions because Visual Studio SDK does not support clang 16 or lower.
 
+[How to upgrade NDK in Visual Studio](https://github.com/codetronik/CodetronikPass/blob/main/doc/UpgradeVisualStudioNDK.md)
+
 ### Compile LLVM
 1. open the ```manifest.xml``` from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
 2. install CMake
