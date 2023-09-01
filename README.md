@@ -48,8 +48,8 @@ $ nmake
 ```
 5. patch the ndk
 ```sh
-xcopy /E NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib64 NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib
-copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
+$ xcopy /E NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib64 NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib
+$ copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
 ```
 
 ## Build for Android (on Linux)
