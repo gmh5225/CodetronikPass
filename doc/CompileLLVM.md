@@ -17,7 +17,7 @@ $ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MAN
 $ cd Release
 $ nmake
 ```
-7. install llvm
+8. install llvm
 ```sh
 xcopy /E f:\llvm-project\Release\bin d:\custom-llvm\x64\bin\
 xcopy /E f:\llvm-project\Release\include d:\custom-llvm\x64\lib\clang\17\include\
