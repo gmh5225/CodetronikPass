@@ -30,39 +30,9 @@ $ make -j16
 ```
 
 ## Build for Android (on Windows)
-Use Visual Studio 2022 to build llvm and llvm pass.
-
-Use NDK r26 or later versions because Visual Studio SDK does not support clang 16 or lower.
-
-[How to upgrade NDK in Visual Studio](https://github.com/codetronik/CodetronikPass/blob/main/doc/UpgradeVisualStudioNDK.md)
 
 ### Compile LLVM
-1. open the ```manifest.xml``` from the path ```/NDKPATH/toolchains/llvm/prebuilt/windows-x86_64/``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
-2. install CMake
-3. install Visual Studio 2022 including [Clang](https://learn.microsoft.com/ko-kr/cpp/build/clang-support-msbuild?view=msvc-170)
-4. open "x86 Native Tools Command Prompt for VS 2022" // for x86 llvm
-5. open "x64 Native Tools Command Prompt for VS 2022" // for x64 llvm
-6. change your system locale to english. (other than English, errors may occur during compilation.) 
-7. download and compile llvm. Make sure to fix ```DLLVM_VERSION_PATCH``` to your ndk's Clang version.
-```sh
-// ndk-r26-rc1
-$ git clone https://android.googlesource.com/toolchain/llvm-project
-$ cd llvm-project
-$ git checkout d9f89f4d16663d5012e5c09495f3b30ece3d2362
-$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release[BIT] -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_VERSION_PATCH=2 -G "NMake Makefiles"
-$ cd Release
-$ nmake
-```
-7. Install LLVM
-```sh
-$ mkdir d:\custom-llvm\lib d:\custom-llvm\bin d:\custom-llvm\x64\lib  d:\custom-llvm\x64\bin
-xcopy d:\llvm-project\Release32\bin d:\custom-llvm\bin
-xcopy d:\llvm-project\Release64\bin d:\custom-llvm\X64\bin
-
-
-```
-
-
+[How to compile LLVM Pass for Android in Visual Studio](https://github.com/codetronik/CodetronikPass/blob/main/doc/CompileLLVM.md)
 
 5. patch the ndk
 ```sh
