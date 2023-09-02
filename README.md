@@ -32,7 +32,7 @@ $ make -j16
 ## Build for Android (on Windows)
 
 ### Compile LLVM
-[How to compile LLVM Pass for Android in Visual Studio](https://github.com/codetronik/CodetronikPass/blob/main/doc/CompileLLVM.md)
+[How to compile LLVM Pass for Android using Visual Studio](https://github.com/codetronik/CodetronikPass/blob/main/doc/CompileLLVM.md)
 
 5. patch the ndk
 ```sh
