@@ -44,6 +44,13 @@ $ copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
 - using Clang
 
 - using VC
+```sh
+$ git clone https://github.com/codetronik/CodetronikPass
+$ cd CodetronikPass
+$ cmake -B project -DLLVM_DIR=d:\custom-llvm\lib\cmake
+$ project\CodetronikPass.sln
+```
+Change the project settings to Release x64 and build.
 
 ## Clang option
 
