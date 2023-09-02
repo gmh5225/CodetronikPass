@@ -19,8 +19,8 @@ $ nmake
 ```
 8. install llvm
 ```sh
-xcopy /E f:\llvm-project\Release\bin d:\custom-llvm\x64\bin\
+xcopy /E f:\llvm-project\Release\bin d:\custom-llvm\bin\
 xcopy /E f:\llvm-project\Release\include d:\custom-llvm\x64\lib\clang\17\include\
 xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\x64\lib\clang\17\include\
-xcopy /E f:\llvm-project\Release\lib d:\custom-llvm\x64\lib\
+xcopy /E f:\llvm-project\Release\lib d:\custom-llvm\lib\
 ```
