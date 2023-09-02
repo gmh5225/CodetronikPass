@@ -33,11 +33,6 @@ $ make -j16
 ### Compile LLVM
 [How to compile LLVM Pass for Android using Visual Studio](https://github.com/codetronik/CodetronikPass/blob/main/doc/CompileLLVM.md)
 
-5. patch the ndk
-```sh
-$ xcopy /E NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib64 NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib
-$ copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
-```
 
 ### Compile Pass Plugin
 - using Clang
