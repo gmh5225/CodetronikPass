@@ -44,6 +44,7 @@ $ copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
 - using Clang
 
 - using VC
+  Using the vc compiler causes a lot of type warning.
 ```sh
 $ git clone https://github.com/codetronik/CodetronikPass
 $ cd CodetronikPass
