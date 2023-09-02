@@ -32,4 +32,3 @@ xcopy /E f:\llvm-project\Release64\include d:\custom-llvm\x64\lib\clang\17\inclu
 xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\x64\lib\clang\17\include\
 xcopy /E f:\llvm-project\Release64\lib d:\custom-llvm\x64\lib\
 ```
-### Make the project
