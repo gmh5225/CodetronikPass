@@ -19,9 +19,16 @@ $ cd Release
 $ nmake
 ```
 7. install llvm
-xcopy /E f:\llvm-project\Release\bin d:\custom-llvm\bin\
-xcopy /E f:\llvm-project\Release\include d:\custom-llvm\lib\clang\17\include\
+```sh
+// x86
+xcopy /E f:\llvm-project\Release32\bin d:\custom-llvm\bin\
+xcopy /E f:\llvm-project\Release32\include d:\custom-llvm\lib\clang\17\include\
 xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\lib\clang\17\include\
-xcopy /E f:\llvm-project\Release\lib d:\custom-llvm\lib\
-
+xcopy /E f:\llvm-project\Release32\lib d:\custom-llvm\lib\
+// x64
+xcopy /E f:\llvm-project\Release64\bin d:\custom-llvm\x64\bin\
+xcopy /E f:\llvm-project\Release64\include d:\custom-llvm\x64\lib\clang\17\include\
+xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\x64\lib\clang\17\include\
+xcopy /E f:\llvm-project\Release64\lib d:\custom-llvm\x64\lib\
+```
 ### Make the project
