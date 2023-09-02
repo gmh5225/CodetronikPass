@@ -40,6 +40,11 @@ $ xcopy /E NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\lib64 NDKPATH\toolcha
 $ copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
 ```
 
+### Compile Pass Plugin
+- using Clang
+
+- using VC
+
 ## Clang option
 
 ### Visual Studio
