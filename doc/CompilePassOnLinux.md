@@ -1,5 +1,5 @@
 ## Build for Android (on Linux)
-Downloading a prebuilt clang from AOSP makes it easy to compile a pass without having to compile llvm.
+Downloading a prebuilt clang from AOSP makes it easy to compile a pass without having to compile llvm.<br>
 I haven't applied to jni yet.
 
 ### Download AOSP Clang
