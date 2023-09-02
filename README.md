@@ -43,8 +43,8 @@ $ copy bin\clang.exe NDKPATH\toolchains\llvm\prebuilt\windows-x86_64\bin
 ### Compile Pass Plugin
 - using Clang
 
-- using VC
-  Using the vc compiler causes a lot of type warning.
+- using VC<br>
+  using the VC compiler causes a lot of type warning.<br>
 ```sh
 $ git clone https://github.com/codetronik/CodetronikPass
 $ cd CodetronikPass
