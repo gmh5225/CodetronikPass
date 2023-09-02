@@ -22,7 +22,7 @@ add_library(CodetronikPass SHARED RegisterPass.cpp)
 target_include_directories(CodetronikPass PRIVATE ${CMAKE_SOURCE_DIR})
 target_include_directories(CodetronikPass PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 
-if(APPLE)
-target_link_libraries(CodetronikPass LLVMCore LLVMSupport LLVMTransformUtils)
-endif(APPLE)
+llvm_map_components_to_libnames(LLVM_LIBRARIES Core Support TransformUtils)
+target_link_libraries(CodetronikPass PRIVATE ${LLVM_LIBRARIES})
+
 add_subdirectory(AntiFunctionDecompile)
