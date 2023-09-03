@@ -13,14 +13,14 @@ $ cd f:\
 $ git clone https://android.googlesource.com/toolchain/llvm-project
 $ cd llvm-project
 $ git checkout d9f89f4d16663d5012e5c09495f3b30ece3d2362
-$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_NEW_PASS_MANAGER=ON -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_EXPORT_SYMBOLS_FOR_PLUGINS=On -DLLVM_VERSION_PATCH=2 -G "NMake Makefiles"
+$ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=RELEASE -DLLVM_TARGETS_TO_BUILD="X86;AArch64;ARM" -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_EXPORT_SYMBOLS_FOR_PLUGINS=On -DLLVM_VERSION_PATCH=2 -G "NMake Makefiles"
 $ cd Release
 $ nmake
 ```
 8. install llvm
 ```sh
 xcopy /E f:\llvm-project\Release\bin d:\custom-llvm\bin\
-xcopy /E f:\llvm-project\Release\include d:\custom-llvm\x64\lib\clang\17\include\
-xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\x64\lib\clang\17\include\
+xcopy /E f:\llvm-project\Release\include d:\custom-llvm\lib\clang\17\include\
+xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\lib\clang\17\include\
 xcopy /E f:\llvm-project\Release\lib d:\custom-llvm\lib\
 ```
