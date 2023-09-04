@@ -59,3 +59,4 @@ Be sure to optimize using the -Ox option. Otherwise, pass cannot be applied.
 
 ## Test Environment
 - C++, Objective C++ / iPhone 12 mini / Xcode 14.3.1
+- C++ / Visual Studio 2022
