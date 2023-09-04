@@ -9,7 +9,7 @@ The reason is that Visual Studio sdk does not support Clang 16 or lower versions
 6. Open ```C:\Microsoft\AndroidNDK\android-ndk-r23c\toolchains\llvm/prebuilt\windows-x86_64\manifest_8481493.xml``` and find string ```project path="toolchain/llvm-project"``` and check the revision.
 7. Download and compile llvm. Make sure to fix ```DLLVM_VERSION_PATCH``` to your ndk's Clang version.
 ```
-// A directory is an example. Change it to suit your environment.
+// Directories are an example. Change it to suit your environment.
 $ cd f:\
 $ git clone https://android.googlesource.com/toolchain/llvm-project
 $ cd llvm-project
