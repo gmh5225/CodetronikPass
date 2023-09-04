@@ -24,7 +24,7 @@ xcopy /E f:\llvm-project\Release\include d:\custom-llvm\lib\clang\17\include\
 xcopy /E /Y f:\llvm-project\llvm\include d:\custom-llvm\lib\clang\17\include\
 xcopy /E f:\llvm-project\Release\lib d:\custom-llvm\lib\
 ```
-9. patch the NDK
+9. patch Clang.exe
 ```sh
 copy f:\llvm-project\Release\bin\clang.exe C:\Microsoft\AndroidNDK\android-ndk-r23c\toolchains\llvm\prebuilt\windows-x86_64\bin
 ```
