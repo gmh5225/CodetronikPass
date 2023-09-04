@@ -50,10 +50,12 @@ Change the project settings to Release x64 and build.
 ## Clang option
 
 ### Visual Studio
+Project Setting -> Configuration Properties -> C/C++ -> Command Line -> Additional Options
+> -fpass-plugin=/libCodetronikPass.so
 
 ### Xcode
 Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
-> -fno-legacy-pass-manager -fpass-plugin=/YOURPATH/CodetronikPass/Release/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64
+> -fno-legacy-pass-manager -fpass-plugin=/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64
 
 ## Output
 - dynamic library
