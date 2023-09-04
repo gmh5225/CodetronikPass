@@ -35,17 +35,11 @@ $ make -j16
 
 
 ### Compile Pass Plugin
-- using Clang
-
-- using VC<br>
-  using the VC compiler causes a lot of type warning.<br>
 ```sh
 $ git clone https://github.com/codetronik/CodetronikPass
-$ cd CodetronikPass
-$ cmake -B project -DLLVM_DIR=d:\custom-llvm\lib\cmake
-$ project\CodetronikPass.sln
+$ notepad.exe CodetronikPass\windows\Directory.build.props
 ```
-Change the project settings to Release x64 and build.
+Modify ```LLVMINstallDir``` then open ```CodetronikPass.sln``` and build.
 
 ## Clang option
 
