@@ -28,6 +28,10 @@ $ cd Release
 $ make -j16
 ```
 
+### Xcode's Clang option
+Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
+> -fno-legacy-pass-manager -fpass-plugin=/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64
+
 ## Build for Android (on Windows)
 
 ### Compile LLVM
@@ -41,18 +45,9 @@ $ notepad.exe CodetronikPass\windows\Directory.build.props
 ```
 Modify ```LLVMINstallDir``` then open ```CodetronikPass.sln``` and build.
 
-## Clang option
-
-### Visual Studio
+### Visual Studio's Clang option
 Project Setting -> Configuration Properties -> C/C++ -> Command Line -> Additional Options
 > -fpass-plugin=/libCodetronikPass.so
-
-### Xcode
-Project Setting -> Apple Clang -> Custom Compiler Flags -> Other C Flags -> Release  
-> -fno-legacy-pass-manager -fpass-plugin=/libCodetronikPass.dylib -DCMAKE_OSX_ARCHITECTURES=arm64
-
-## Output
-- dynamic library
 
 ## Issues
 Be sure to optimize using the -Ox option. Otherwise, pass cannot be applied.
