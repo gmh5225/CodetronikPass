@@ -17,7 +17,8 @@ $ cmake -S llvm -B Release -DCMAKE_BUILD_TYPE=RELEASE -DLLVM_ENABLE_PROJECTS="cl
 $ cd Release
 $ nmake
 ```
-8. install llvm
+8. Open ```d:\custom-llvm\lib\clang\17\include\llvm\Passes\PassPlugin.h``` and Edit ```extern "C" ::llvm::PassPluginLibraryInfo LLVM_ATTRIBUTE_WEAK``` to ```extern "C" ::llvm::PassPluginLibraryInfo LLVM_ATTRIBUTE_WEAK __declspec(dllexport)```
+9. install llvm
 ```sh
 xcopy /E f:\llvm-project\Release\bin d:\custom-llvm\bin\
 xcopy /E f:\llvm-project\Release\include d:\custom-llvm\lib\clang\17\include\
